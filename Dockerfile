@@ -2,8 +2,10 @@ FROM ubuntu:trusty
 
 RUN apt-get update -y \
     && apt-get install -y \
-        ant \
-        git \
+        ant        \
+        debhelper  \
+        devscripts \
+        git        \
 && rm -rf /var/lib/apt/lists/*
 
 # Disable host key checking from within builds as we cannot interactively accept them
