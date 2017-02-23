@@ -2,12 +2,13 @@ FROM ubuntu:trusty
 
 RUN apt-get update -y \
     && apt-get install -y \
-        ant        \
-        debhelper  \
-        devscripts \
-        git        \
-        ruby       \
-        ruby-dev   \
+        ant          \
+        debhelper    \
+        devscripts   \
+        git          \
+        libjsch-java \
+        ruby         \
+        ruby-dev     \
 && rm -rf /var/lib/apt/lists/*
 
 # Install fpm
