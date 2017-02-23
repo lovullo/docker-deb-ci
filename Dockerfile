@@ -14,6 +14,9 @@ RUN apt-get update -y \
 # Install fpm
 RUN gem install fpm --no-rdoc --no-ri
 
+# Symlink jsch
+RUN ln -s /usr/share/java/jsch.jar /usr/share/ant/lib/jsch.jar
+
 # Disable host key checking from within builds as we cannot interactively accept them
 # TODO: It might be a better idea to bake ~/.ssh/known_hosts into the container
 RUN mkdir -p ~/.ssh
