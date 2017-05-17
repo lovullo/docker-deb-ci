@@ -1,7 +1,7 @@
 FROM ubuntu:trusty
 
 RUN apt-get update -y \
-    && apt-get install -y --no-install-recommends \
+    && apt-get install -y \
         ant           \
         debhelper     \
         devscripts    \
