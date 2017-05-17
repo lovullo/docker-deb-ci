@@ -1,14 +1,16 @@
 FROM ubuntu:trusty
 
 RUN apt-get update -y \
-    && apt-get install -y \
-        ant          \
-        debhelper    \
-        devscripts   \
-        git          \
-        libjsch-java \
-        ruby         \
-        ruby-dev     \
+    && apt-get install -y --no-install-recommends \
+        ant           \
+        debhelper     \
+        devscripts    \
+        git           \
+        libjsch-java  \
+        ruby          \
+        ruby-dev      \
+        maven         \
+        openjdk-7-jdk \
 && rm -rf /var/lib/apt/lists/*
 
 # Install fpm
